@@ -5,10 +5,10 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 // 👇 Your images — files inside web/public/hero/
 const images = [
+  "/images/img4.jpeg",
+  "/images/img5.jpeg",
   "/images/img6.jpeg",
   "/images/img7.jpeg",
-  "/images/img5.jpeg",
-  "/images/img4.jpeg",
 ];
 
 const SLIDE_DURATION = 5000; // ms each image stays before sliding

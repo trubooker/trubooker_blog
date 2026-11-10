@@ -33,7 +33,8 @@ function formatDate(date?: string) {
   });
 }
 
-function shorten(text = "", length = 140) {
+function shorten(text?: string | null, length = 140) {
+  if (!text) return "";
   return text.length > length ? text.slice(0, length).trim() + "…" : text;
 }
 

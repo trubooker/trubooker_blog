@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
 const links = [
@@ -12,7 +11,6 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const pathname = usePathname();
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/90 backdrop-blur">
@@ -32,9 +30,7 @@ export default function Navbar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition hover:text-blue-600 ${
-                pathname === link.href ? "text-blue-600" : "text-gray-600"
-              }`}
+             className="text-sm font-medium text-gray-600 transition hover:text-blue-600"
             >
               {link.label}
             </Link>
