@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import GetStarted from "@/components/GetStarted";
+import FooterBody from "@/components/Footer/FooterBody";
 
 const geist = Geist({ subsets: ["latin"] });
 
@@ -17,7 +19,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geist.className} flex min-h-screen flex-col bg-white text-gray-900 antialiased`}>
         <Navbar />
         <div className="flex-1">{children}</div>
-        <Footer />
+        <GetStarted playstoreurl={""} appstoreurl={""}/>
+        <FooterBody/>
+        {/* <Footer /> */}
       </body>
     </html>
   );

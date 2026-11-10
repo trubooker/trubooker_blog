@@ -88,7 +88,7 @@ export default function HeroCarousel() {
               Read the Blog
             </Link>
             <a
-              href="https://trubooker.com"
+              href="https://play.google.com/store/apps/details?id=com.trubooker.trubooker&hl=en"
               className="rounded-full bg-blue-600 px-7 py-3 font-semibold text-white transition hover:bg-blue-700"
             >
               Book a Trip →

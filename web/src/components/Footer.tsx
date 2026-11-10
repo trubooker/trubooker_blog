@@ -31,7 +31,7 @@ export default function Footer() {
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Company</h3>
           <ul className="mt-4 space-y-3 text-sm">
             <li><a href="https://trubooker.com" className="hover:text-white">About TruBooker</a></li>
-            <li><a href="mailto:support@trubooker.com" className="hover:text-white">Contact Support</a></li>
+            <li><a href="mailto:info@trubooker.com" className="hover:text-white">Email: info@trubooker.com</a></li>
           </ul>
         </div>
       </div>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { cacheLife } from "next/cache";
 import { client, urlFor } from "@/sanity/client";
 import HeroCarousel from "@/components/HeroCarousel";
+import Browse from "@/components/Browse";
 
 const POSTS_QUERY = `*[_type == "post" && defined(slug.current)]
   | order(publishedAt desc){
@@ -47,6 +48,7 @@ export default async function Home() {
   return (
     <main>
       <HeroCarousel  />
+      <Browse/>
 
       {/* ---------- ALL POSTS ---------- */}
       <div id="latest" className="mx-auto max-w-6xl scroll-mt-24 px-4 pt-16">
