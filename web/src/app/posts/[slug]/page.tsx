@@ -23,9 +23,9 @@ async function PostContent({ params }: { params: Promise<{ slug: string }> }) {
 
   return (
     <>
-      <h1 className="mt-4 mb-2 text-4xl font-bold">{post.title}</h1>
+      <h1 className="mt-4 mb-2 text-3xl font-bold leading-tight sm:text-4xl">{post.title}</h1>
       {post.publishedAt && (
-        <p className="mb-8 text-sm text-gray-500">
+        <p className="mb-6 text-sm text-gray-500 sm:mb-8">
           {new Date(post.publishedAt).toLocaleDateString()}
         </p>
       )}
@@ -33,10 +33,10 @@ async function PostContent({ params }: { params: Promise<{ slug: string }> }) {
         <img
           src={urlFor(post.mainImage).width(1000).url()}
           alt={post.title}
-          className="mb-8 w-full rounded-xl"
+          className="mb-6 w-full rounded-lg sm:mb-8 sm:rounded-xl"
         />
       )}
-      <article className="prose prose-lg max-w-none">
+     <article className="prose max-w-none break-words sm:prose-lg prose-img:rounded-lg">
         <PortableText value={post.body} />
       </article>
     </>
@@ -45,7 +45,7 @@ async function PostContent({ params }: { params: Promise<{ slug: string }> }) {
 
 export default function PostPage({ params }: { params: Promise<{ slug: string }> }) {
   return (
-    <main className="mx-auto max-w-2xl px-4 py-12">
+    <main className="mx-auto max-w-2xl px-5 py-8 sm:px-4 sm:py-12">
       <Link href="/" className="text-sm text-gray-500 hover:underline">← All posts</Link>
       <Suspense fallback={<p className="mt-8 text-gray-500">Loading post…</p>}>
         <PostContent params={params} />
